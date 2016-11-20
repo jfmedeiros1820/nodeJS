@@ -6,6 +6,9 @@ app.set('io', io);
 
 var port = process.env.PORT || 3000
 
-http.listen(port, function(){
-    console.log('Server running on heroku');
+var server = http.listen(port, function(){
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
 })
