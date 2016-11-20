@@ -1,0 +1,242 @@
+<html ng-app="cdcApp">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="icon"
+          href="enterUrl"
+          type="image/ico"/>
+    <link href="https://plus.googlecom/108540024862647200608"
+          rel="publisher"/>
+    <title>Books of Java, SOA, Android, iPhone, Ruby on Rails and much more - Books</title>
+    <link href="/css/site/cssbase-min.css"
+          rel="stylesheet" type="text/css" media="all"/>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
+          rel='stylesheet'/>
+    <link
+            href="/css/site/fonts.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/fontello-ie7.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/fontello-embedded.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/fontello.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/style.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/layout-colors.css"
+            rel="stylesheet" type="text/css" media="all"/>
+    <link
+            href="/css/site/responsive-style.css"
+            rel="stylesheet" type="text/css" media="all"/>
+
+    <link rel="canonical" href="http://www.casadocodigo.com.br/"/>
+
+    <link href="/css/site/book-collection.css"
+          rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body class="home">
+
+<header id="layout-header">
+    <div class="clearfix container">
+        <a href="/" id="logo">
+            <img src="//cdn.shopify.com/s/files/1/0155/7645/t/223/assets/c-d-c-logo.svg?6295370849448042063" alt="Books">
+        </a>
+
+        <div id="header-content">
+            <nav id="main-nav">
+
+                <ul class="clearfix">
+                    <li><a href="/cart" rel="nofollow">Your car</a></li>
+
+                    <li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">About</a></li>
+
+                    <li><a href="/pages/perguntas-frequentes" rel="nofollow">Questions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<nav class="categories-nav">
+    <ul class="container">
+        <li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+        <li class="category"><a href="/collections/livros-de-agile">Agile </a></li>
+        <li class="category"><a href="/collections/livros-de-front-end">Front End </a></li>
+        <li class="category"><a href="/collections/livros-de-games">Games </a></li>
+        <li class="category"><a href="/collections/livros-de-java">Java </a></li>
+        <li class="category"><a href="/collections/livros-de-mobile">Mobile </a></li>
+        <li class="category"><ahref="/collections/livros-desenvolvimento-web"> Web </a></li>
+        <li class="category"><a href="/collections/outros"> Others </a></li>
+    </ul>
+</nav>
+
+<!-- List init-->
+<section id="index-section" class="container middle" ng-controller="HomeController">
+
+    <ul id="home-highlight-collection">
+        <%for(i=0; i<3; i++) {%>
+        <li class="col-left">
+            <a href="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494" class="block clearfix">
+                <img width="170" height="240" src="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494" alt="<%=books[i].title%>" title="<%=books[i].title%>"/>
+
+                <h2 class="product-title"><%=books[i].title%></h2>
+                <small class="buy-button">New!</small>
+            </a>
+        </li>
+        <%}%>
+    </ul>
+
+    <h1 class="cdc-call">Last days with special prices. Enjoy!</h1>
+
+    <ul class="clearfix book-collection">
+        <%for(i=0; i<books.length; i++) {%>
+            <li>
+                <a href="linkDetalhe" class="block clearfix">
+                    <h2 class="product-title"><%=books[i].title%></h2>
+                    <img width="143"
+                         height="202"
+                         src="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494"
+                         alt="<%=books[i].title%>"
+                         title="<%=books[i].title%>"/>
+
+                    <small class="buy-button">Buy</small>
+                </a>
+            </li>
+        <%}%>
+
+    </ul>
+
+    <h2 class="cdc-call">What is different here!</h2>
+
+    <ul id="cdc-diferenciais" class="clearfix">
+        <li class="col-left">
+            <h3>E-books without DRM. Read wherever you want</h3>
+
+            <p>
+                <span class="sprite" id="sprite-drm"></span> 
+                Our e-books do not have DRM, meaning you can read on any computer, tablet and smartphone.
+            </p>
+        </li>
+        <li class="col-right">
+            <h3>Reputable Authors in the Community</h3>
+
+            <p>
+                <span class="sprite" id="sprite-renome"></span> 
+                Authors who actively participate in the Open Source community, mailing lists, groups, and more.
+            </p>
+        </li>
+        <li class="col-left">
+            <h3>Get e-book updates</h3>
+
+            <p>
+                <span class="sprite" id="sprite-atualizacoes"></span> 
+                When you buy an e-book, you are automatically entitled to updates and corrections from it..
+            </p>
+        </li>
+        <li class="col-right">
+            <h3>Curated books</h3>
+
+            <p>
+                <span class="sprite" id="sprite-caelum"></span> 
+                Experienced developers who constantly review and revise books.
+            </p>
+        </li>
+    </ul>
+
+</section>
+
+<!-- end-->
+
+<footer id="layout-footer">
+    <div class="clearfix container">
+
+        <div id="collections-footer">
+            <!-- cdc-footer -->
+            <p class="footer-title">Coleções de Programação</p>
+            <ul class="footer-text-links">
+                <li><a href="/collections/livros-de-java">Java</a></li>
+                <li><a href="/collections/livros-desenvolvimento-web">Web Development</a></li>
+                <li><a href="/collections/livros-de-mobile">Mobile</a></li>
+                <li><a href="/collections/games">Games</a></li>
+                <li><a href="/collections/livros-de-front-end">Front End</a></li>
+            </ul>
+            <p class="footer-title">Other Subjects</p>
+            <ul class="footer-text-links">
+                <li><a href="/collections/livros-de-agile">Agile</a></li>
+                <li><a href="/collections/outros">and others...</a></li>
+            </ul>
+        </div>
+        <div id="social-footer">
+            <!-- books-footer -->
+            <p class="footer-title">Products Links</p>
+            <ul class="footer-text-links">
+                <li><a href="http://livros.casadocodigo.com.br" rel="nofollow">My E-books</a></li>
+                <li><a href="/pages/sobre-a-casa-do-codigo">About the site</a></li>
+                <li><a href="/pages/perguntas-frequentes">Common Questions</a></li>
+                <li><a href="https://www.caelum.com.br">Caelum - Ensino e Inovação</a></li>
+                <li><a href="http://www.codecrushing.com/" rel="nofollow">Code Crushing</a></li>
+                <li><a href="http://www.casadocodigo.com.br/pages/politica-de-privacidade"
+                            rel="nofollow">Política de Privacidade</a></li>
+            </ul>
+            <p class="footer-title">Redes Sociais</p>
+            <ul>
+                <li class="social-links"><a
+                            href="http://www.twitter.com/casadocodigo" target="_blank"
+                            id="twitter" rel="nofollow">Facebook</a> <a
+                            href="http://www.facebook.com/casadocodigo" target="_blank"
+                            id="facebook" rel="nofollow">Twitter</a></li>
+            </ul>
+        </div>
+        <div id="newsletter-footer">
+            <!-- social-footer -->
+            <p class="footer-title">Receive News and Releases</p>
+
+            <div id="form-newsletter">
+                <form action="" method="POST" id="ss-form" class="form-newsletter">
+                    <ul>
+                        <li>
+                            <input type="hidden" name="pageNumber" value="0"/><input
+                                    type="hidden" name="backupCache" value=""/><input
+                                    type="email" name="entry.0.single" value="" class="ss-q-short"
+                                    id="entry_0" placeholder="seu@email.com"/>
+                        </li>
+                        <li>
+                            <input type="submit" name="submit" value="I wanna get!" id="submit-newsletter"/>
+                        </li>
+                    </ul>
+                </form>
+                <ul>
+                    <li class="ie8">
+                        <a href="" rel="nofollow">Receive News and Releases</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="footer-payments">
+                <li>
+                    <img class="accepts-paypal"
+                         src="//cdn.shopify.com/s/files/1/0155/7645/t/223/assets/paypal.png?6295370849448042063"
+                         border="0" alt="Paypal" width="130" height="80"/>
+                </li>
+                <li>
+                    <img class="accepts-pagseguro"
+                         src="//cdn.shopify.com/s/files/1/0155/7645/t/223/assets/pagseguro.png?6295370849448042063"
+                         border="0" alt="PagSeguro" width="180" height="26"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    socket.on('newPromotion', function(data){
+        alert('Promotion Book ' + data.book.id);
+    });
+</script>
+</body>
+</html>

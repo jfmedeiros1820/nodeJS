@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <form action="/products" method="post">
+            <div class="errors">
+                <% if(validationErrors) { %>
+                    <ul>
+                        <% for(var i=0; i < validationErrors.length; i++) { %>
+                            <li><%= validationErrors[i].param %> - <%= validationErrors[i].msg %></li>
+                        <% } %>
+                    </ul>
+                <% } %>
+            </div>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="<%= product.title %>" placeholder="Insert the title"/>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea cols="20" rows="10" name="description" id="description" placeholder="Insert the description"><%= product.description %></textarea>
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input type="text" name="price" id="price" value="<%= product.price %>" placeholder="Insert the price"/>
+            </div>
+            <input type="submit" value="Save"/>
+        <form>
+    </body>
+</html>
