@@ -22,10 +22,10 @@ function createDBConnection(){
         var connectionUrl = process.env.CLEARDB_DATABASE_URL;
         var grupos = connectionUrl.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?/);
         return mysql.createConnection({
-            host: 'us-cdbr-iron-east-04.cleardb.net',
-            user: 'b875f2db0aed1b',
-            password: 'c14e5de0',
-            database: 'heroku_3a828c6cfe3f38e'
+            host:grupos[3],
+            user:grupos[1],
+            password:grupos[2],
+            database:grupos[4]
         });
     }
 }
