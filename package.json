@@ -4,7 +4,8 @@
   "description": "CRUD project for Products",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "author": "João Felipe",
   "license": "ISC",
@@ -16,6 +17,9 @@
     "express-validator": "^2.21.0",
     "mysql": "^2.12.0",
     "socket.io": "^1.6.0"
+  },
+  "engines": {
+    "node": "7.1.0"
   },
   "devDependencies": {
     "mocha": "^3.1.2",

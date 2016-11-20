@@ -4,6 +4,8 @@ var io = require('socket.io')(http);
 
 app.set('io', io);
 
-http.listen(3000, function(){
-    console.log('Server running');
+var port = process.env.PORT || 3000
+
+http.listen(port, function(){
+    console.log('Server running on heroku');
 })
